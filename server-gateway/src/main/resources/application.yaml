@@ -1,0 +1,27 @@
+server:
+  port: 8180
+
+spring:
+  application:
+    name: server-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: service-login
+          uri: lb://service-login
+          predicates:
+            - Path=/admin/**
+        - id: kolPlatform
+          uri: lb://kol-platform
+          predicates:
+            - Path=/kolPlatform/**
+        - id: delivery-platform
+          uri: lb://delivery-platform
+          predicates:
+            - Path=/deliveryPlatform/**

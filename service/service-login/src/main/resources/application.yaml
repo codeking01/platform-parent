@@ -1,0 +1,14 @@
+server:
+  port: 8181
+
+spring:
+  application:
+    name: service-login
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    gateway:
+      discovery:
+        locator:
+          enabled: true
