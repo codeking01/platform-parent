@@ -9,7 +9,6 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
 
-    <groupId>outfox.ead</groupId>
     <artifactId>service-login-client</artifactId>
 
     <properties>

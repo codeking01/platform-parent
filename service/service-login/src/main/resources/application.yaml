@@ -12,3 +12,11 @@ spring:
       discovery:
         locator:
           enabled: true
+  security:
+    user:
+      name: admin
+      password: admin
+      roles:
+        - admin
+#  main:
+#    allow-bean-definition-overriding: true

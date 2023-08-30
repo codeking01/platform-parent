@@ -16,7 +16,7 @@ spring:
         - id: service-login
           uri: lb://service-login
           predicates:
-            - Path=/admin/**
+            - Path=/admin/**, Path=/login/**
         - id: kolPlatform
           uri: lb://kol-platform
           predicates:
